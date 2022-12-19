@@ -41,14 +41,15 @@ export function validate(input: string): boolean {
   if (!pattern.test(input)) return false;
 
   // Checksum
-  let sum = 0;
+  let checksum = 0;
   for (let i = 0; i < 17; i++) {
     const char = input.charAt(i);
     const num = charList.indexOf(char);
     const weight = weightList[i]!;
-    sum += num * weight;
+    checksum += num * weight;
   }
-  if (charList[31 - (sum % 31)] !== input.charAt(17)) {
+  checksum = 31 - (checksum % 31);
+  if (charList[checksum] !== input.charAt(17)) {
     return false;
   }
 
