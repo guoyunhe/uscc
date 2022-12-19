@@ -1,0 +1,57 @@
+{
+  "name": "uscc",
+  "version": "1.0.0",
+  "description": "Unified Social Credit Code | 统一社会信用代码",
+  "keywords": [
+    "china",
+    "credit",
+    "code",
+    "validator"
+  ],
+  "homepage": "https://github.com/guoyunhe/uscc#readme",
+  "bugs": {
+    "url": "https://github.com/guoyunhe/uscc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guoyunhe/uscc.git"
+  },
+  "license": "GPL-3.0",
+  "author": "Guo Yunhe",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/dts/index.d.ts",
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node-scripts build",
+    "format": "node-scripts format",
+    "lint": "node-scripts lint",
+    "test": "node-scripts test",
+    "watch": "node-scripts watch"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": "@guoyunhe/node-scripts"
+  },
+  "jest": {
+    "preset": "@guoyunhe/node-scripts"
+  },
+  "dependencies": {
+    "commander": "^9.0.0"
+  },
+  "devDependencies": {
+    "@guoyunhe/node-scripts": "^1.0.0",
+    "@tsconfig/node16-strictest": "^1.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^16.0.0",
+    "typescript": "^4.0.0"
+  }
+}
