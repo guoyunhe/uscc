@@ -40,7 +40,6 @@ export function validate(input: string): boolean {
   if (input.length !== 18) return false;
   if (!pattern.test(input)) return false;
 
-  // Checksum
   let checksum = 0;
   for (let i = 0; i < 17; i++) {
     const char = input.charAt(i);
