@@ -45,7 +45,8 @@ export function validate(input: string): boolean {
   for (let i = 0; i < 17; i++) {
     const char = input.charAt(i);
     const num = charList.indexOf(char);
-    sum += num * weightList[i]!;
+    const weight = weightList[i]!;
+    sum += num * weight;
   }
   if (charList[31 - (sum % 31)] !== input.charAt(17)) {
     return false;
