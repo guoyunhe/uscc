@@ -1,6 +1,6 @@
 {
   "name": "uscc",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Unified Social Credit Code | 统一社会信用代码",
   "keywords": [
     "china",
@@ -16,8 +16,12 @@
     "type": "git",
     "url": "git+https://github.com/guoyunhe/uscc.git"
   },
+  "funding": "https://github.com/sponsors/guoyunhe",
   "license": "GPL-3.0",
-  "author": "Guo Yunhe",
+  "author": {
+    "name": "Guo Yunhe",
+    "email": "i@guoyunhe.me"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/dts/index.d.ts",
@@ -35,7 +39,7 @@
     "watch": "node-scripts watch"
   },
   "prettier": {
-    "printWidth": 120,
+    "printWidth": 100,
     "singleQuote": true
   },
   "eslintConfig": {
@@ -43,9 +47,6 @@
   },
   "jest": {
     "preset": "@guoyunhe/node-scripts"
-  },
-  "dependencies": {
-    "commander": "^9.0.0"
   },
   "devDependencies": {
     "@guoyunhe/node-scripts": "^1.0.0",
